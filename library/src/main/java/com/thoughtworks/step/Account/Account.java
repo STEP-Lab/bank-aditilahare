@@ -28,10 +28,11 @@ public class Account {
     }
 
     public int debitMoney(int amount) throws MinimumBalanceException{
-        balance -= amount;
+
         if(balance<1000){
             throw new MinimumBalanceException();
         }
+        balance -= amount;
         return balance;
     }
 }

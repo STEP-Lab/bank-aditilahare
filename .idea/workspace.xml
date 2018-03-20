@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5407ae7-8bfe-4a8b-ba57-974dfafabfa8" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,7 +31,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AccountTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccountTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/test/AccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
@@ -46,11 +47,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/src/main/java/com/thoughtworks/step/Account/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="361">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#452#453#0" expanded="true" />
                 <element signature="e#482#483#0" expanded="true" />
@@ -111,6 +122,7 @@
         <option value="$PROJECT_DIR$/library/src/main/java/com/thoughtworks/step/MinimumBalanceException/MinimumBalanceException.java" />
         <option value="$PROJECT_DIR$/library/src/main/java/com/thoughtworks/step/Account/Account.java" />
         <option value="$PROJECT_DIR$/library/test/AccountTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -150,92 +162,6 @@
             <path>
               <item name="bank-aditilahare" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank-aditilahare" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank-aditilahare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank-aditilahare" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank-aditilahare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank-aditilahare" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank-aditilahare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank-aditilahare" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank-aditilahare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank-aditilahare" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank-aditilahare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank-aditilahare" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank-aditilahare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank-aditilahare" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="thoughtworks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank-aditilahare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank-aditilahare" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="thoughtworks" type="462c0819:PsiDirectoryNode" />
-              <item name="step" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank-aditilahare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank-aditilahare" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="thoughtworks" type="462c0819:PsiDirectoryNode" />
-              <item name="step" type="462c0819:PsiDirectoryNode" />
-              <item name="Account" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank-aditilahare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank-aditilahare" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="thoughtworks" type="462c0819:PsiDirectoryNode" />
-              <item name="step" type="462c0819:PsiDirectoryNode" />
-              <item name="MinimumBalanceException" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank-aditilahare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank-aditilahare" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -528,13 +454,17 @@
       <option name="project" value="LOCAL" />
       <updated>1521540577954</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added functionality to avoid creating an account with insufficient balance.">
+      <created>1521540631916</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1521540631916</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AccountTest_(1) - 2018.03.20 at 15h 18m 23s.xml">
-      <configuration name="AccountTest (1)" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AccountTest_(1) - 2018.03.20 at 15h 21m 20s.xml">
       <configuration name="AccountTest (1)" configurationId="JUnit" />
     </history-entry>
@@ -556,6 +486,9 @@
     <history-entry file="AccountTest_(1) - 2018.03.20 at 15h 38m 44s.xml">
       <configuration name="AccountTest (1)" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AccountTest_(1) - 2018.03.20 at 15h 43m 25s.xml">
+      <configuration name="AccountTest (1)" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="AccountTest_checkMinimumBalanceException - 2018.03.20 at 15h 22m 29s.xml">
       <configuration name="AccountTest.checkMinimumBalanceException" configurationId="JUnit" />
     </history-entry>
@@ -564,7 +497,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10618000" />
+    <option name="totallyTimeSpent" value="11028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
@@ -686,19 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/thoughtworks/step/Account/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#452#453#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/src/main/java/com/thoughtworks/step/MinimumBalanceException/MinimumBalanceException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -721,6 +641,27 @@
             <element signature="e#539#540#0" expanded="true" />
             <element signature="e#604#605#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/thoughtworks/step/Account/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>

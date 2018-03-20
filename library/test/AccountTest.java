@@ -37,5 +37,9 @@ public class AccountTest {
         account.creditMoney(1000);
         assertThat(account.getBalance(),is(6000));
     }
-
+    @Test
+    public void reduceMoneyFromAccount (){
+        account.debitMoney(1000);
+        assertThat(account.getBalance(),is(4000));
+    }
 }

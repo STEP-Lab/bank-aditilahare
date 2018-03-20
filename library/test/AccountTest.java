@@ -32,5 +32,10 @@ public class AccountTest {
     public void checkMinimumBalanceException() throws MinimumBalanceException{
         new Account("2345",200);
     }
+    @Test
+    public void addMoneyIntoTheAccount (){
+        account.creditMoney(1000);
+        assertThat(account.getBalance(),is(6000));
+    }
 
 }

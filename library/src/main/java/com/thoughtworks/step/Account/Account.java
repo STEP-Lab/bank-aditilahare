@@ -1,4 +1,4 @@
-package Account;
+package com.thoughtworks.step.Account;
 
 import MinimumBalanceException.MinimumBalanceException;
 

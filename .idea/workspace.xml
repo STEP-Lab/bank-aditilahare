@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="e5407ae7-8bfe-4a8b-ba57-974dfafabfa8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/library/src/main/java/com/thoughtworks/step/Account/Account.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/thoughtworks/step/Account/Account.java" />
       <change beforePath="$PROJECT_DIR$/library/test/AccountTest.java" afterPath="$PROJECT_DIR$/library/test/AccountTest.java" />
     </list>
-=======
+
     <list default="true" id="e5407ae7-8bfe-4a8b-ba57-974dfafabfa8" name="Default" comment="" />
->>>>>>> Added Condition : After debit transaction there has to be sufficient balance in the account.
+    <list default="true" id="e5407ae7-8bfe-4a8b-ba57-974dfafabfa8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -36,13 +37,11 @@
       <file leaf-file-name="AccountTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library/test/AccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="517">
               <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-=======
+
             <state relative-caret-position="-53">
               <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
->>>>>>> Added Condition : After debit transaction there has to be sufficient balance in the account.
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#433#434#0" expanded="true" />
@@ -57,7 +56,6 @@
       <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/src/main/java/com/thoughtworks/step/Account/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="407">
               <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
@@ -66,11 +64,9 @@
                 <element signature="e#516#517#0" expanded="true" />
                 <element signature="e#552#553#0" expanded="true" />
               </folding>
-=======
             <state relative-caret-position="76">
               <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
->>>>>>> Added Condition : After debit transaction there has to be sufficient balance in the account.
             </state>
           </provider>
         </entry>
@@ -1116,9 +1112,7 @@
       <option name="project" value="LOCAL" />
       <updated>1521554128853</updated>
     </task>
-<<<<<<< HEAD
     <option name="localTasksCounter" value="10" />
-=======
     <task id="LOCAL-00010" summary="Added Condition : After debit transaction there has to be sufficient balance in the account.">
       <created>1521555262375</created>
       <option name="number" value="00010" />
@@ -1127,7 +1121,6 @@
       <updated>1521555262375</updated>
     </task>
     <option name="localTasksCounter" value="11" />
->>>>>>> Added Condition : After debit transaction there has to be sufficient balance in the account.
     <servers />
   </component>
   <component name="TestHistory">
@@ -1163,11 +1156,9 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
     <option name="totallyTimeSpent" value="12764000" />
-=======
     <option name="totallyTimeSpent" value="14552000" />
->>>>>>> Added Condition : After debit transaction there has to be sufficient balance in the account.
+    <option name="totallyTimeSpent" value="14722000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
@@ -1272,12 +1263,9 @@
     <MESSAGE value="Added .gitignore file." />
     <MESSAGE value="Added functionality to credit money into the account." />
     <MESSAGE value="Added functionality to debit money from account." />
-<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="Added functionality to debit money from account." />
-=======
     <MESSAGE value="Added Condition : After debit transaction there has to be sufficient balance in the account." />
     <option name="LAST_COMMIT_MESSAGE" value="Added Condition : After debit transaction there has to be sufficient balance in the account." />
->>>>>>> Added Condition : After debit transaction there has to be sufficient balance in the account.
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1392,7 +1380,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/src/main/java/com/thoughtworks/step/Account/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="407">
           <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
@@ -1401,24 +1388,19 @@
             <element signature="e#516#517#0" expanded="true" />
             <element signature="e#552#553#0" expanded="true" />
           </folding>
-=======
         <state relative-caret-position="76">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
->>>>>>> Added Condition : After debit transaction there has to be sufficient balance in the account.
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/library/Account/Account.class" />
     <entry file="file://$PROJECT_DIR$/library/test/AccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="517">
           <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-=======
         <state relative-caret-position="-53">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
->>>>>>> Added Condition : After debit transaction there has to be sufficient balance in the account.
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#433#434#0" expanded="true" />

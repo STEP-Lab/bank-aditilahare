@@ -1,5 +1,6 @@
 import com.thoughtworks.step.Account.Account;
 import com.thoughtworks.step.Account.InvalidAccountNumberException;
+import com.thoughtworks.step.Account.InvalidAmountException;
 import com.thoughtworks.step.Account.MinimumBalanceException;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,7 +32,7 @@ public class AccountTest {
         new Account("2345-6789",200);
     }
     @Test
-    public void addMoneyIntoTheAccount (){
+    public void addMoneyIntoTheAccount () throws InvalidAmountException {
         account.creditMoney(1000);
         assertThat(account.getBalance(),is(6000.0));
     }
@@ -49,5 +50,10 @@ public class AccountTest {
     @Test(expected = InvalidAccountNumberException.class)
     public void checkValidAccountNumberWhileCreating() throws InvalidAccountNumberException, MinimumBalanceException {
         Account account = new Account("1234", 5000);
+    }
+    @Test (expected = InvalidAmountException.class)
+    public void checkValidAmountWhileCrediting() throws InvalidAmountException, MinimumBalanceException, InvalidAccountNumberException {
+        Account account = new Account("1234-5678", 2000);
+        account.creditMoney(-10);
     }
 }

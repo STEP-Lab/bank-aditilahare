@@ -1,17 +1,19 @@
 package com.thoughtworks.step.Account;
 
-import MinimumBalanceException.MinimumBalanceException;
-
 public class Account {
     private final String accountNumber;
     private int balance;
 
-    public Account(String accountNumber, int balance)throws MinimumBalanceException{
+    public Account(String accountNumber, int balance)throws MinimumBalanceException {
         this.accountNumber = accountNumber;
-        if(balance<1000) {
-            throw new MinimumBalanceException();
-        }
+        checkMinimumBalance(balance, "Insufficient Balance");
         this.balance = balance;
+    }
+
+    private void checkMinimumBalance(int balance, String message) throws MinimumBalanceException {
+        if (balance < 1000) {
+            throw new MinimumBalanceException(message);
+        }
     }
 
     public int getBalance() {
@@ -28,11 +30,7 @@ public class Account {
     }
 
     public int debitMoney(int amount) throws MinimumBalanceException{
-
-        if(balance<1000){
-            throw new MinimumBalanceException();
-        }
+        checkMinimumBalance(balance, "Low balance : Can't process your withdraw request");
         balance -= amount;
         return balance;
     }
-}

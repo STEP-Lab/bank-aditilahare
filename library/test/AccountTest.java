@@ -1,11 +1,11 @@
-import Account.Account;
-import MinimumBalanceException.MinimumBalanceException;
+import com.thoughtworks.step.Account.Account;
+import com.thoughtworks.step.Account.MinimumBalanceException;
 import org.junit.Before;
 import org.junit.Test;
 
 
-import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 public class AccountTest {
 
@@ -40,9 +40,10 @@ public class AccountTest {
         account.debitMoney(1000);
         assertThat(account.getBalance(),is(4000));
     }
-    @Test(expected = MinimumBalanceException.class)
-    public void checkMinimumBalanceAfterDebit()throws MinimumBalanceException{
-        assertThat(account.getBalance(),is(5000));
-        account.debitMoney(4800);
+
+    @Test
+    public void checkMinimumBalanceWhileDebiting() throws MinimumBalanceException {
+        Account account = new Account("1234", 3000);
+        account.debitMoney(2800);
     }
 }

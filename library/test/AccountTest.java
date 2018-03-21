@@ -18,7 +18,7 @@ public class AccountTest {
 
     @Test
     public void checkBalance(){
-        assertThat(account.getBalance(),is(5000));
+        assertThat(account.getBalance(),is(5000.0));
     }
 
     @Test
@@ -33,12 +33,12 @@ public class AccountTest {
     @Test
     public void addMoneyIntoTheAccount (){
         account.creditMoney(1000);
-        assertThat(account.getBalance(),is(6000));
+        assertThat(account.getBalance(),is(6000.0));
     }
     @Test
     public void reduceMoneyFromAccount () throws MinimumBalanceException {
         account.debitMoney(1000);
-        assertThat(account.getBalance(),is(4000));
+        assertThat(account.getBalance(),is(4000.0));
     }
 
     @Test

@@ -1,19 +1,19 @@
 import com.thoughtworks.step.Account.Account;
+import com.thoughtworks.step.Account.InvalidAccountNumberException;
 import com.thoughtworks.step.Account.MinimumBalanceException;
 import org.junit.Before;
 import org.junit.Test;
 
-
-import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class AccountTest {
 
     private Account account;
 
     @Before
-    public void setUp() throws MinimumBalanceException {
-       account = new Account("1234", 5000);
+    public void setUp() throws MinimumBalanceException, InvalidAccountNumberException {
+       account = new Account("1234-5678", 5000);
     }
 
     @Test
@@ -23,12 +23,12 @@ public class AccountTest {
 
     @Test
     public void checkAccountNumber(){
-        assertThat(account.getAccountNumber(),is("1234"));
+        assertThat(account.getAccountNumber(),is("1234-5678"));
     }
 
     @Test(expected= MinimumBalanceException.class)
-    public void checkMinimumBalanceException() throws MinimumBalanceException{
-        new Account("2345",200);
+    public void checkMinimumBalanceException() throws MinimumBalanceException,InvalidAccountNumberException{
+        new Account("2345-6789",200);
     }
     @Test
     public void addMoneyIntoTheAccount (){
@@ -41,9 +41,13 @@ public class AccountTest {
         assertThat(account.getBalance(),is(4000.0));
     }
 
-    @Test
-    public void checkMinimumBalanceWhileDebiting() throws MinimumBalanceException {
-        Account account = new Account("1234", 3000);
+    @Test(expected = MinimumBalanceException.class)
+    public void checkMinimumBalanceWhileDebiting() throws MinimumBalanceException,InvalidAccountNumberException{
+        Account account = new Account("1234-5678", 3000);
         account.debitMoney(2800);
+    }
+    @Test(expected = InvalidAccountNumberException.class)
+    public void checkValidAccountNumberWhileCreating() throws InvalidAccountNumberException, MinimumBalanceException {
+        Account account = new Account("1234", 5000);
     }
 }

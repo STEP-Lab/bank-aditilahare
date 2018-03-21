@@ -31,11 +31,13 @@ public class AccountTest {
     public void checkMinimumBalanceException() throws MinimumBalanceException,InvalidAccountNumberException{
         new Account("2345-6789",200);
     }
+
     @Test
     public void addMoneyIntoTheAccount () throws InvalidAmountException {
         account.creditMoney(1000);
         assertThat(account.getBalance(),is(6000.0));
     }
+
     @Test
     public void reduceMoneyFromAccount () throws MinimumBalanceException {
         account.debitMoney(1000);
@@ -47,13 +49,16 @@ public class AccountTest {
         Account account = new Account("1234-5678", 3000);
         account.debitMoney(2800);
     }
+
     @Test(expected = InvalidAccountNumberException.class)
     public void checkValidAccountNumberWhileCreating() throws InvalidAccountNumberException, MinimumBalanceException {
         Account account = new Account("1234", 5000);
     }
+
     @Test (expected = InvalidAmountException.class)
     public void checkValidAmountWhileCrediting() throws InvalidAmountException, MinimumBalanceException, InvalidAccountNumberException {
         Account account = new Account("1234-5678", 2000);
-        account.creditMoney(-10);
+        this.account.creditMoney(-10);
     }
+
 }

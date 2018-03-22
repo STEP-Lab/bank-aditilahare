@@ -5,20 +5,9 @@ public class Account {
     private double balance;
 
     public Account(String accountNumber, double balance) throws MinimumBalanceException, InvalidAccountNumberException {
-        checkForInvalidAccountNumber(accountNumber,"Invalid Account Number");
         this.accountNumber = accountNumber;
         checkMinimumBalance(balance, "Insufficient Balance");
         this.balance = balance;
-    }
-
-    private void checkForInvalidAccountNumber(String accountNumber,String message) throws InvalidAccountNumberException {
-        if(!isValidAccountNumber(accountNumber)){
-            throw new InvalidAccountNumberException(message);
-        }
-    }
-
-    private boolean isValidAccountNumber(String accountNumber) {
-        return accountNumber.matches("\\d{4}-\\d{4}");
     }
 
     private void checkMinimumBalance(double balance, String message) throws MinimumBalanceException {
@@ -33,10 +22,6 @@ public class Account {
 
     public double getBalance() {
         return balance;
-    }
-
-    public String getAccountNumber() {
-        return accountNumber;
     }
 
     public double creditMoney(int amount) throws InvalidAmountException {

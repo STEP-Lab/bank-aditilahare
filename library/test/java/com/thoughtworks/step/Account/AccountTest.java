@@ -43,10 +43,6 @@ public class AccountTest {
         account.debitMoney(2800);
     }
 
-    @Test(expected = InvalidAccountNumberException.class)
-    public void checkValidAccountNumberWhileCreating() throws InvalidAccountNumberException, MinimumBalanceException {
-        Account account = new Account("1234", 5000);
-    }
 
     @Test (expected = InvalidAmountException.class)
     public void checkValidAmountWhileCrediting() throws InvalidAmountException, MinimumBalanceException, InvalidAccountNumberException {

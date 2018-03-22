@@ -1,7 +1,4 @@
-import com.thoughtworks.step.Account.Account;
-import com.thoughtworks.step.Account.InvalidAccountNumberException;
-import com.thoughtworks.step.Account.InvalidAmountException;
-import com.thoughtworks.step.Account.MinimumBalanceException;
+package com.thoughtworks.step.Account;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -22,10 +19,6 @@ public class AccountTest {
         assertThat(account.getBalance(),is(5000.0));
     }
 
-    @Test
-    public void checkAccountNumber(){
-        assertThat(account.getAccountNumber(),is("1234-5678"));
-    }
 
     @Test(expected= MinimumBalanceException.class)
     public void checkMinimumBalanceException() throws MinimumBalanceException,InvalidAccountNumberException{
@@ -58,7 +51,7 @@ public class AccountTest {
     @Test (expected = InvalidAmountException.class)
     public void checkValidAmountWhileCrediting() throws InvalidAmountException, MinimumBalanceException, InvalidAccountNumberException {
         Account account = new Account("1234-5678", 2000);
-        this.account.creditMoney(-10);
+        account.creditMoney(-10);
     }
 
 }

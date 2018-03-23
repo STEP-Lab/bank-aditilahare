@@ -12,4 +12,12 @@ public class TransactionsTest {
         transactions.debit(1000,"Dhanashri");
         assertThat(transactions.list,hasItem(new DebitTransaction(new Date(),1000,"Dhanashri")));
     }
+
+    @Test
+    void mustRecordCorrectCreditTransaction() {
+        Transactions transactions = new Transactions();
+        transactions.credit(2000,"Madhuri");
+        assertThat(transactions.list,hasItem(new CreditTransaction(new Date(),2000,"Madhuri")));
+    }
 }
+

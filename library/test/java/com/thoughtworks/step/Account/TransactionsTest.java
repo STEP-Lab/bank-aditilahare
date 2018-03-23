@@ -13,5 +13,3 @@ public class TransactionsTest {
         assertThat(transactions.list,hasItem(new DebitTransaction(new Date(),1000,"Dhanashri")));
     }
 }
-
-I

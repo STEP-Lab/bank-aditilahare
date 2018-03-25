@@ -8,6 +8,6 @@ gradlew.bat
 .gradle
 .project
 *.iml
-bin/
 out/
 .DS_Store
+

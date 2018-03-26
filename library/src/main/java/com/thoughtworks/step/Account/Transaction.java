@@ -14,7 +14,6 @@ public abstract class Transaction {
     }
 
     public Date getDate() {
-
         return date;
     }
 
@@ -31,5 +30,9 @@ public abstract class Transaction {
     public int hashCode() {
 
         return Objects.hash(date, amount, to);
+    }
+
+    public double getAmount() {
+        return amount;
     }
 }

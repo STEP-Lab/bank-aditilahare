@@ -7,7 +7,12 @@ public class AccountNumberTest {
 
     @Test(expected = InvalidAccountNumberException.class)
     public void checkValidAccountNumberWhileCreating() throws InvalidAccountNumberException {
-        AccountNumber accountNumber = new AccountNumber("1234");
+        AccountNumber.createValidAccountNumber("abcd");
+    }
+
+    @Test(expected = InvalidAccountNumberException.class)
+    public void checkForValidAccountNumber() throws InvalidAccountNumberException{
+        AccountNumber.createValidAccountNumber("1234");
     }
 }
 

@@ -26,4 +26,23 @@ public class Transactions extends ArrayList<Transaction> {
         }
         return transactions;
     }
+
+    public Transactions filterByAmountLesserThan(double amount) {
+        Transactions transactions = new Transactions();
+        for (Transaction transaction:list){
+            if(transaction.getAmount() <= amount){
+                transactions.list.add(transaction);
+            }
+        }
+        return transactions;
+    }
+
+//    public Transactions filterByTransactionType(String type) {
+//        Transactions transactions = new Transactions();
+//        for (Transaction transaction:list){
+//            if(transaction()){
+//
+//            }
+//        }
+//    }
 }

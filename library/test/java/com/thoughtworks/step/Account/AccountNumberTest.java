@@ -14,5 +14,9 @@ public class AccountNumberTest {
     public void checkForValidAccountNumber() throws InvalidAccountNumberException{
         AccountNumber.createValidAccountNumber("1234");
     }
+    @Test
+    public void accountNumberValidation() throws InvalidAccountNumberException{
+        AccountNumber.createValidAccountNumber("1234-5678");
+    }
 }
 

@@ -1,6 +1,7 @@
 package com.thoughtworks.step.Account;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.Date;
@@ -50,14 +51,30 @@ public class TransactionsTest {
     }
 
     @Test
-    void filterTransactionByAmount() {
+    void filterTransactionByAmountIfItIsGreaterThanAmount() {
         transactions.credit(1000,"Pallabi");
         transactions.credit(400,"Dhanu");
         transactions.credit(1500,"Pragya");
+        transactions.debit(500,"Ishu");
         Transactions filteredTransactions = transactions.filterByAmountGreaterThan(500);
         CreditTransaction pallabi = new CreditTransaction(new Date(), 1000, "Pallabi");
         CreditTransaction pragya = new CreditTransaction(new Date(), 1500, "Pragya");
-        assertThat(filteredTransactions.list,hasItems(pallabi,pragya));
+        DebitTransaction ishu = new DebitTransaction(new Date(), 500, "Ishu");
+        assertThat(filteredTransactions.list,hasItems(pallabi,pragya,ishu));
     }
+
+    @Test
+    void filterTransactionByAmountIfItIsLesserThanAmount() {
+        transactions.credit(500,"Aditi");
+        transactions.credit(700,"Ashish");
+        transactions.credit(1000,"Shubham");
+        transactions.debit(500,"Sayima");
+        Transactions filteredTransactions = this.transactions.filterByAmountLesserThan(900);
+        CreditTransaction aditi = new CreditTransaction(new Date(), 500, "Aditi");
+        CreditTransaction shubham = new CreditTransaction(new Date(), 700, "Ashish");
+        DebitTransaction sayu = new DebitTransaction(new Date(), 500, "Sayima");
+        assertThat(filteredTransactions.list,hasItems(aditi,shubham,sayu));
+    }
+
 }
 

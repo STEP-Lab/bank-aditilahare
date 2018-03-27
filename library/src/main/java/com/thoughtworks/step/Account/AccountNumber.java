@@ -3,7 +3,7 @@ package com.thoughtworks.step.Account;
 public class AccountNumber {
     private final String number;
 
-    public AccountNumber(String number) throws InvalidAccountNumberException{
+    public AccountNumber(String number){
         this.number = number;
     }
 

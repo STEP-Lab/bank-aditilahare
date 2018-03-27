@@ -48,4 +48,10 @@ public abstract class Transaction {
     }
 
     public abstract String getType();
+
+    public String toCsv() {
+        return date +
+                "," + amount +
+                "," + to + '\n';
+    }
 }

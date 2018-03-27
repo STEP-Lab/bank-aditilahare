@@ -1,7 +1,5 @@
 package com.thoughtworks.step.Account;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Transactions extends ArrayList<Transaction> {
@@ -40,13 +38,10 @@ public class Transactions extends ArrayList<Transaction> {
         return transactions;
     }
 
-    public void print(PrintWriter writer) throws FileNotFoundException, UnsupportedEncodingException {
-        PrintWriter printWrite = new PrintWriter("sample.txt", "UTF-8");
+    public void print(PrintWriter writer) {
         for (Transaction transaction:list){
             writer.println(transaction.toString());
-            printWrite.println(transaction.toString());
         }
-        printWrite.close();
     }
 
     public Transactions filterAllDebitTransaction() {
@@ -67,5 +62,11 @@ public class Transactions extends ArrayList<Transaction> {
             }
         }
         return transactions;
+    }
+
+    public void writeInCsv(FileWriter writer) throws IOException {
+        for (Transaction transaction:list){
+            writer.write(transaction.toCsv());
+        }
     }
 }

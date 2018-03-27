@@ -5,9 +5,7 @@ import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Date;
 import static org.hamcrest.CoreMatchers.hasItem;
@@ -111,10 +109,8 @@ public class TransactionsTest {
     @Test
     void shouldPrintTransaction() throws FileNotFoundException, UnsupportedEncodingException {
         CreditTransaction sree = new CreditTransaction(1000, "Sreenadh");
-        CreditTransaction sudhin = new CreditTransaction(2000, "Sudhin");
         ArrayList<String> result = new ArrayList<>();
         transactions.credit(1000, "Sreenadh");
-        transactions.credit(2000, "Sudhin");
         PrintWriter printWriter = new PrintWriter("the-file-name.txt", "UTF-8") {
             @Override
             public void println(String x) {
@@ -123,7 +119,24 @@ public class TransactionsTest {
         };
         transactions.print(printWriter);
         printWriter.close();
-        assertThat(result, hasItems(sree.toString(), sudhin.toString()));
+        assertThat(result, hasItems(sree.toString()));
+    }
+
+    @Test
+    void shouldPrintTrasactionInCsvFormat() throws IOException {
+        CreditTransaction dhanu = new CreditTransaction(1000, "Dhanu");
+        ArrayList<String> expected = new ArrayList<>();
+        transactions.credit(1000,"Dhanu");
+        FileWriter fileWriter = new FileWriter("sample.txt"){
+            @Override
+            public void write(String x){
+                expected.add(x);
+            }
+        };
+        transactions.writeInCsv(fileWriter);
+        fileWriter.flush();
+        fileWriter.close();
+        assertThat(expected,hasItems(dhanu.toCsv()));
     }
 }
 

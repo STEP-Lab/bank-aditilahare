@@ -37,12 +37,13 @@ public class Transactions extends ArrayList<Transaction> {
         return transactions;
     }
 
-//    public Transactions filterByTransactionType(String type) {
-//        Transactions transactions = new Transactions();
-//        for (Transaction transaction:list){
-//            if(transaction()){
-//
-//            }
-//        }
-//    }
+    public Transactions filterByTransactionType(String type) {
+        Transactions transactions = new Transactions();
+        for (Transaction transaction:list){
+            if(transaction.getType()==type){
+               transactions.list.add(transaction);
+            }
+        }
+        return transactions;
+    }
 }

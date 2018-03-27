@@ -6,6 +6,7 @@ public abstract class Transaction {
     protected Date date;
     protected final double amount;
     protected final String to;
+    protected String type = null;
 
     public Transaction(Date date, double amount, String to) {
         this.date = date;
@@ -35,4 +36,6 @@ public abstract class Transaction {
     public double getAmount() {
         return amount;
     }
+
+    public abstract String getType();
 }

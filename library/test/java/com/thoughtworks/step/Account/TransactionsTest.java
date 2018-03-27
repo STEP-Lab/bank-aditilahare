@@ -51,7 +51,7 @@ public class TransactionsTest {
     }
 
     @Test
-    void filterTransactionByAmountIfItIsGreaterThanAmount() {
+    void shouldFilterTransactionByAmountGreaterThan() {
         transactions.credit(1000,"Pallabi");
         transactions.credit(400,"Dhanu");
         transactions.credit(1500,"Pragya");
@@ -64,7 +64,7 @@ public class TransactionsTest {
     }
 
     @Test
-    void filterTransactionByAmountIfItIsLesserThanAmount() {
+    void shouldFilterTransactionByAmountLesserThan() {
         transactions.credit(500,"Aditi");
         transactions.credit(700,"Ashish");
         transactions.credit(1000,"Shubham");
@@ -76,5 +76,15 @@ public class TransactionsTest {
         assertThat(filteredTransactions.list,hasItems(aditi,shubham,sayu));
     }
 
+    @Test
+    void shouldFilterTransactionByTypeOfTransaction() {
+        transactions.credit(700,"Ashish");
+        transactions.credit(1000,"Shubham");
+        transactions.debit(500,"Sayima");
+        Transactions filteredTransactions = this.transactions.filterByTransactionType("Credit");
+        CreditTransaction shubham = new CreditTransaction(new Date(), 1000, "Shubham");
+        CreditTransaction ashish = new CreditTransaction(new Date(), 700, "Ashish");
+        assertThat(filteredTransactions.list,hasItems(shubham,ashish));
+    }
 }
 

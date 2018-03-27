@@ -4,6 +4,11 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.Date;
 import static org.hamcrest.CoreMatchers.hasItem;
 import static org.hamcrest.CoreMatchers.hasItems;
@@ -85,6 +90,30 @@ public class TransactionsTest {
         CreditTransaction shubham = new CreditTransaction(new Date(), 1000, "Shubham");
         CreditTransaction ashish = new CreditTransaction(new Date(), 700, "Ashish");
         assertThat(filteredTransactions.list,hasItems(shubham,ashish));
+    }
+
+    @Test
+    @Ignore
+    void shouldFilterTransactionsBySpecificDate() {
+
+    }
+
+    @Test
+    void shouldPrintTransaction() throws FileNotFoundException, UnsupportedEncodingException {
+        CreditTransaction sree = new CreditTransaction(1000, "Sreenadh");
+        CreditTransaction sudhin = new CreditTransaction(2000, "Sudhin");
+        ArrayList<String> result = new ArrayList<>();
+        transactions.credit(1000,"Sreenadh");
+        transactions.credit(2000,"Sudhin");
+        PrintWriter printWriter = new PrintWriter("the-file-name.txt", "UTF-8") {
+            @Override
+            public void println(String x) {
+                result.add(x);
+            }
+        };
+        transactions.print(printWriter);
+        printWriter.close();
+        assertThat(result,hasItems(sree.toString(),sudhin.toString()));
     }
 }
 

@@ -1,4 +1,5 @@
 package com.thoughtworks.step.Account;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class Transactions extends ArrayList<Transaction> {
@@ -45,5 +46,11 @@ public class Transactions extends ArrayList<Transaction> {
             }
         }
         return transactions;
+    }
+
+    public void print(PrintWriter writer) {
+        for (Transaction transaction:list){
+            writer.println(transaction.toString());
+        }
     }
 }

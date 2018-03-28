@@ -88,4 +88,14 @@ public class Transactions extends ArrayList<Transaction> {
         }
         return transactions;
     }
+
+    public Transactions filterTransactionsBeforeSpecificDate(Date date) {
+        Transactions transactions = new Transactions();
+        for (Transaction transaction:list){
+            if(transaction.getDate().before(date)){
+                transactions.list.add(transaction);
+            }
+        }
+        return transactions;
+    }
 }

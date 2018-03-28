@@ -6,17 +6,21 @@ public class Account {
 
     public Account(String accountNumber, double balance) throws MinimumBalanceException, InvalidAccountNumberException {
         this.accountNumber = accountNumber;
-        checkMinimumBalance(balance, "Insufficient Balance");
         this.balance = balance;
     }
 
-    private void checkMinimumBalance(double balance, String message) throws MinimumBalanceException {
+    private static void checkMinimumBalance(double balance, String message) throws MinimumBalanceException {
         if (!canDebit(balance)) {
             throw new MinimumBalanceException(message);
         }
     }
 
-    private boolean canDebit(double balance) {
+    public static Account checkForMinimumBalanceWhileCreatingAccount(String accountNumber,double balance) throws MinimumBalanceException, InvalidAccountNumberException {
+        checkMinimumBalance(balance, "Insufficient Balance");
+        return new Account(accountNumber,balance);
+    }
+
+    private static boolean canDebit(double balance) {
         return balance > 1000;
     }
 
@@ -36,7 +40,7 @@ public class Account {
         }
     }
 
-    private boolean canCredit(int amount) {
+    private static boolean canCredit(int amount) {
         return amount > 0 ;
     }
 

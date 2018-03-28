@@ -1,6 +1,7 @@
 package com.thoughtworks.step.Account;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Transactions extends ArrayList<Transaction> {
 
@@ -14,8 +15,16 @@ public class Transactions extends ArrayList<Transaction> {
         this.list.add(new DebitTransaction(amount,name));
     }
 
+    protected void debit(Date date,double amount, String name) {
+        this.list.add(new DebitTransaction(date,amount,name));
+    }
+
     public void credit(double amount, String name) {
         this.list.add(new CreditTransaction(amount,name));
+    }
+
+    protected void credit(Date date,double amount, String name) {
+        this.list.add(new CreditTransaction(date,amount,name));
     }
 
     public Transactions filterByAmountGreaterThan(double amount) {
@@ -68,5 +77,15 @@ public class Transactions extends ArrayList<Transaction> {
         for (Transaction transaction:list){
             writer.write(transaction.toCsv());
         }
+    }
+
+    public Transactions filterTransactionsBySpecificDate(Date date) {
+        Transactions transactions = new Transactions();
+        for (Transaction transaction:list){
+            if(transaction.getDate().equals(date)){
+                transactions.list.add(transaction);
+            }
+        }
+        return transactions;
     }
 }

@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import static org.hamcrest.CoreMatchers.hasItem;
@@ -14,11 +16,14 @@ import static org.junit.Assert.assertThat;
 public class TransactionsTest {
 
     private Transactions transactions;
+    private SimpleDateFormat simpleDateFormatter;
 
     @BeforeEach
     void setUp() {
+        simpleDateFormatter = new SimpleDateFormat("yyyy-mm-dd");
         transactions = new Transactions();
     }
+
 
     @Before
 
@@ -108,7 +113,7 @@ public class TransactionsTest {
 
     @Test
     void shouldPrintTransaction() throws FileNotFoundException, UnsupportedEncodingException {
-        CreditTransaction sree = new CreditTransaction(1000, "Sreenadh");
+        CreditTransaction sree = new CreditTransaction(new Date(),1000, "Sreenadh");
         ArrayList<String> result = new ArrayList<>();
         transactions.credit(1000, "Sreenadh");
         PrintWriter printWriter = new PrintWriter("the-file-name.txt", "UTF-8") {
@@ -124,7 +129,7 @@ public class TransactionsTest {
 
     @Test
     void shouldPrintTrasactionInCsvFormat() throws IOException {
-        CreditTransaction dhanu = new CreditTransaction(1000, "Dhanu");
+        CreditTransaction dhanu = new CreditTransaction(new Date(),1000, "Dhanu");
         ArrayList<String> expected = new ArrayList<>();
         transactions.credit(1000,"Dhanu");
         FileWriter fileWriter = new FileWriter("sample.txt"){
@@ -137,6 +142,20 @@ public class TransactionsTest {
         fileWriter.flush();
         fileWriter.close();
         assertThat(expected,hasItems(dhanu.toCsv()));
+    }
+
+    @Test
+    void shouldFilterAllTransactionsOfParticularDate() throws ParseException {
+        Date TwentyEightMarch = simpleDateFormatter.parse("2018-03-28");
+        Date TwentyFiveMarch = simpleDateFormatter.parse("2018-03-25");
+        CreditTransaction aditi = new CreditTransaction(TwentyEightMarch,1000, "Aditi");
+        CreditTransaction pragya = new CreditTransaction(TwentyEightMarch, 900, "Pragya");
+        CreditTransaction ishu = new CreditTransaction(TwentyFiveMarch, 800, "Ishu");
+        transactions.credit(TwentyEightMarch,1000,"Aditi");
+        transactions.credit(TwentyEightMarch,900,"Pragya");
+        transactions.credit(TwentyFiveMarch,800,"Ishu");
+        Transactions filterTransactions = this.transactions.filterTransactionsBySpecificDate(TwentyEightMarch);
+        assertThat(filterTransactions.list,hasItems(aditi,pragya));
     }
 }
 

@@ -172,6 +172,21 @@ public class TransactionsTest {
         Transactions filterTransactions = this.transactions.filterTransactionsBeforeSpecificDate(TwentyFiveMarch);
         assertThat(filterTransactions.list,hasItems(shubham));
     }
+
+    @Test
+    void shouldFilterAllTransactionsAfterSpecificDate() throws ParseException{
+        Date TwentyEightMarch = simpleDateFormatter.parse("2018-03-28");
+        Date TwentyFourMarch = simpleDateFormatter.parse("2018-03-24");
+        Date TwentyFiveMarch = simpleDateFormatter.parse("2018-03-25");
+        CreditTransaction omkar = new CreditTransaction(TwentyEightMarch, 1000, "Omkar");
+        CreditTransaction ashish = new CreditTransaction(TwentyFiveMarch, 1000, "Ashish");
+        DebitTransaction shubham = new DebitTransaction(TwentyFourMarch, 1000, "Shubham");
+        transactions.credit(TwentyEightMarch,1000,"Omkar");
+        transactions.credit(TwentyFiveMarch,1000,"Ashish");
+        transactions.debit(TwentyFourMarch,1000,"Shubham");
+        Transactions filterTransactions = this.transactions.filterTransactionsAfterSpecificDate(TwentyFiveMarch);
+        assertThat(filterTransactions.list,hasItems(omkar));
+    }
 }
 
 
